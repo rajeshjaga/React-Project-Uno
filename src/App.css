@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: rgb(255, 217, 50);
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 3rem;
+  color: rgb(211, 29, 89);
+  padding-bottom: 1rem;
+}
+.reminder {
+  width: 55%;
+  background: rgb(255, 255, 255);
+  margin-top: 5rem;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  margin: 5rem auto;
+}
+.item {
+  width: 100%;
+  background: rgb(241, 241, 241);
+  padding: 0.5rem 0rem 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.23s ease-in-out;
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.item:last-child {
+  margin-bottom: 0.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3,
+p {
+  display: inline;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+p {
+  font-size: 16px;
+  color: #777;
+}
+.item img.trash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2rem 2rem;
+}
+.item img.trash:hover {
+  background: rgb(255, 11, 52);
+}
+.item img.avatar {
+  border-radius: 50px;
+  margin-right: 1rem;
+}
+@media (max-width: 700px) {
+  .reminder {
+    width: 80%;
+  }
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .item .flex {
+    justify-content: center;
+    text-align: center;
+  }
+  .flex {
+    flex-wrap: wrap;
+  }
+  .item img.trash {
+    position: relative;
+    padding: 0.5rem 3.5rem;
+    margin: 1rem auto;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
+}
+
+.flex-fd-col {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.btn {
+  display: inline;
+  width: 100%;
+  background: rgb(28, 228, 28);
+  border: none;
+  padding: 0.75rem 2rem;
+  margin: 0rem 0.1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  outline: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:hover {
+  background: rgb(5, 177, 2);
 }
